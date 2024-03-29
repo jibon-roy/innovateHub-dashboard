@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #ffffff;
+    --primary-color : #222428;
+    --secondery-color: #eeeeee;
+    --hover-color: #F4F5F6;
+     
+}
+
+/* additional classes */
+.rounded {
+    border-radius: 16px;
+}
+.border {
+    border: 2px solid var(--secondery-color);
+}
+.rounded-sm {
+    border-radius: 7px;
+}
+
+.lg-padding {
+    padding: 16px;
+}
+
+.md-padding {
+    padding: 10px;
+}
+
+.sm-padding {
+    padding: 5px;
+}
+.sm-padding-top {
+    padding: 2px 5px;
+}
+
+.bg-white {
+    background-color: var(--main-color);
+}
+.bg-dark {
+    background-color: var(--hover-color);
+}
+.bg-hover {
+    background-color: var(--hover-color);
+}
+
+.link-list {
+    list-style-type: none;
+    padding: 0;
+    text-decoration: none;
+}
+.link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.flex {
+    display: flex;
+    gap: 8px;
+}
+.grid {
+    display: grid;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.space-between {
+    justify-content: space-between;
+}
+.center-item {
+    align-items: center;
+}
+.icon {
+    width: 20px;
+}
+
+.hover:hover{
+    background-color: var(--hover-color);
+}
+
+.list {
+    margin: 3px 0;
+}
+
+.list:hover .hover-2{
+    background-color: var(--main-color);
+}
+
+
+body {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    color: var(--primary-color);
+}
+
+.body-wrapper {
+    display: flex;
+    padding: 16px;
+}
+
+/* navigation */
+
+.navigation {
+    border: 2px solid var(--secondery-color);
+    border-radius: 16px;
+    min-height: calc(100vh - 32px);
+    min-width: 300px;
+}
+
+.nav-header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+/* logo part */
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-image {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+}
+
+.logo-text {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.user-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* navigation part */

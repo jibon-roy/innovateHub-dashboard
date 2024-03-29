@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="utf-8">
@@ -7,21 +7,78 @@
   <title>InnovativeHub</title>
   <link rel="shortcut icon" type="image/png" href="./src/images/icon.png" />
   <link rel="stylesheet" href="./src/styles/style.css" />
-</head>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
 
 <body>
   <!-- main section -->
   <main>
     <!--  Body Wrapper -->
-    <div class="">
+    <div class="body-wrapper">
         <!-- navigation bar  -->
-        <nav>
-            <header>
-                <div>Logo</div>
+        <nav class="navigation rounded md-padding">
+            <!-- nav bar header -->
+            <header class="nav-header lg-padding">
+              <!-- logo -->
+              <div class="logo">
+                <img draggable="false" src="./src/images/icon.png" class="logo-image" />
                 <div>
-                    InnovativeHub
+                  <div>INC</div>
+                  <div class="logo-text">InnovateHub</div>
                 </div>
+              </div>
+              <!-- user icon -->
+              <div >
+                <img draggable="false" class="user-logo" src="./src/images/user.png" alt="">
+              </div>
             </header>
+            <!-- navigatin links and folders -->
+            <div class="nav-bar">
+              <div class="rounded border md-padding">
+                <ul class="link-list">
+                  <!-- navigation links -->
+                  <li class="list">
+                    <a href="#" class="flex center-item rounded-sm hover link sm-padding space-between">
+                      <div class="flex">
+                        <img src="./src/images/designer-team.png" style="transform: rotate(90deg);" class="icon" alt="">
+                        <div class="li-text">Designer team</div>
+                      </div>
+                      <div class="li-aside rounded-sm hover-2 border sm-padding sm-padding-top bg-hover">X + 1</div>
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#" class="flex center-item rounded-sm hover link sm-padding  space-between">
+                      <div class="flex">
+                        <img src="./src/images/designer-team.png" style="transform: rotate(90deg);" class="icon" alt="">
+                        <div class="li-text">Marketing team</div>
+                      </div>
+                      <div class="li-aside rounded-sm hover-2 border sm-padding sm-padding-top bg-hover">X + 1</div>
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#" class="flex center-item rounded-sm hover link sm-padding space-between">
+                      <div class="flex">
+                        <img src="./src/images/designer-team.png" style="transform: rotate(90deg);" class="icon" alt="">
+                        <div class="li-text">Development team</div>
+                      </div>
+                      <div class="li-aside rounded-sm hover-2 border sm-padding sm-padding-top bg-hover">X + 1</div>
+                    </a>
+                  </li>
+                  <li class="list">
+                    <a href="#" class="flex center-item rounded-sm hover link sm-padding space-between">
+                      <div class="flex">
+                        <img src="./src/images/designer-team.png" style="transform: rotate(90deg);" class="icon" alt="">
+                        <div class="li-text">Create a team</div>
+                      </div>
+                      <div class="li-aside rounded-sm hover-2 border sm-padding sm-padding-top bg-hover">X + 1</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
         </nav>
         <!-- site responsive body -->
         <div></div>

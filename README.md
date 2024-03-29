@@ -1,1 +1,1 @@
-## Welcome to innovativeHub
+## Welcome to innovateHub
