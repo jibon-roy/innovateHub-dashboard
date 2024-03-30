@@ -87,6 +87,10 @@
     font-size: small;
 }
 
+.text-lg {
+    font-size: large;
+}
+
 .font-500 {
     font-weight: 500;
 }
@@ -124,6 +128,18 @@
     position: absolute;
 }
 
+.left-0 {
+    left: 0;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
 .space-between {
     justify-content: space-between;
 }
@@ -140,6 +156,9 @@
     width: 20px;
 }
 
+.w-full {
+    width: 100%;
+}
 
 .hover:hover {
     background-color: var(--hover-color);
@@ -247,4 +266,18 @@ body {
     margin: 0 5px 0 -5px;
     height: 2px;
     background-color: var(--secondery-color);
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    /* Adjust this value as needed */
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* Ensures the icon doesn't interfere with the select */
 }

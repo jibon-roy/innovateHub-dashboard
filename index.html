@@ -23,7 +23,7 @@
   <!-- main section -->
   <main>
     <!--  Body Wrapper -->
-    <div class="body-wrapper ">
+    <div class="body-wrapper" style="gap: 15px;">
       <!-- navigation bar  -->
       <nav class="navigation flex-2 flex-col space-between rounded md-padding">
         <!-- nav bar header -->
@@ -263,7 +263,92 @@
         </div>
       </nav>
       <!-- site responsive body -->
-      <div></div>
+      <div style="flex-grow: 1;" class="flex-2 border flex-col space-between rounded">
+        <div>
+          <!-- body header -->
+          <header>
+            <div class="flex space-between center-item lg-padding">
+              <div class="text-lg font-600">Products</div>
+              <div class="flex">
+                <div class="relative">
+                  <i class="fa-solid fa-magnifying-glass absolute pointer"
+                    style="top: 50%; transform: translateY(-50%); left: 10px;"></i>
+                  <input type="text" id="search" name="search" class="border rounded"
+                    style="padding-left: 30px; height: 30px;">
+                </div>
+                <div class="flex space-between center-item rounded-sm pointer hover sm-padding border"
+                  style="height: 30px; width: 30px;"><i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="flex space-between center-item rounded-sm pointer hover sm-padding border"
+                  style="height: 30px; width: 30px;"><i class="fa-solid fa-gear"></i>
+                </div>
+              </div>
+            </div>
+            <hr class="bg-hover border-1">
+            <div class="flex space-between center-item lg-padding">
+              <div class="pointer flex relative">
+                <div class="select-wrapper">
+                  <select class="border center-item font-600 rounded-sm hover link sm-padding space-between"
+                    style="padding-left: 30px;">
+                    <option value="All brands">All brands</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Performance">Performance</option>
+                    <option value="Team">Team</option>
+                    <option value="Analytics">Analytics</option>
+                  </select>
+                  <i class="fa-solid fa-list"></i>
+                </div>
+                <div class="select-wrapper">
+                  <select class="border center-item font-600 rounded-sm hover link sm-padding space-between">
+                    <option value="Desk">Desk</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Team">Team</option>
+                    <option value="Analytics">Analytics</option>
+                  </select>
+                </div>
+                <div class="select-wrapper">
+                  <select class="border center-item font-600 rounded-sm hover link sm-padding space-between">
+                    <option value="Tags">Tags</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Team">Team</option>
+                    <option value="Analytics">Analytics</option>
+                  </select>
+                </div>
+                <div class="select-wrapper">
+                  <select class="border center-item rounded-sm hover link sm-padding space-between">
+                    <option value="Sort">Sort</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Team">Team</option>
+                    <option value="Analytics">Analytics</option>
+                  </select>
+                </div>
+                <div class="select-wrapper">
+                  <select class="border center-item rounded-sm hover link sm-padding space-between">
+                    <option value="Sort">Filter</option>
+                    <option value="Feedback">Feedback</option>
+                    <option value="Team">Team</option>
+                    <option value="Analytics">Analytics</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="border hover flex center-item justify-center  sm-padding rounded-sm font-600"
+                  style="height: 30px;">
+                  <img src="./src/images/add.jpg" class="icon" alt="">
+                  Meeting
+                </div>
+                <div class="border hover flex center-item justify-center sm-padding rounded-sm font-600"
+                  style="height: 30px;">
+                  Import/Export
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div>
+
+        </div>
+      </div>
     </div>
   </main>
   <script src="./src/javascript/script.js"></script>
