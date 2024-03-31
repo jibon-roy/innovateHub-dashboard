@@ -1,0 +1,160 @@
+[
+    {
+        "brand": {
+            "name": "Wix",
+            "image": "./src/images/logos/wix.png"
+        },
+        "description": "Description A",
+        "members": [
+            {
+                "name": "John",
+                "image": "./src/images/members/member1.jpg"
+            },
+            {
+                "name": "Alice",
+                "image": "./src/images/members/member2.webp"
+            },
+            {
+                "name": "Bob",
+                "image": "./src/images/members/member3.jpeg"
+            },
+            {
+                "name": "Bob",
+                "image": "./src/images/members/member4.webp"
+            }
+        ],
+        "categories": "<a href='#'>Category A</a>",
+        "tags": "<span class='tag'>Tag A</span>",
+        "meetingTime": "<strong>2024-04-01</strong>",
+        "plusIcon": "+"
+    },
+    {
+        "brand": {
+            "name": "Shopify",
+            "image": "./src/images/logos/shopify.jpg"
+        },
+        "description": "Description B",
+        "members": [
+            {
+                "name": "Charlie",
+                "image": "./src/images/members/member3.jpeg"
+            },
+            {
+                "name": "David",
+                "image": "./src/images/members/member1.jpg"
+            },
+            {
+                "name": "Eve",
+                "image": "./src/images/members/member4.webp"
+            }
+        ],
+        "categories": "<a href='#'>Category B</a>",
+        "tags": "<span class='tag'>Tag B</span>",
+        "meetingTime": "<strong>2024-04-02</strong>",
+        "plusIcon": "+"
+    },
+    {
+        "brand": {
+            "name": "MailChimp",
+            "image": "./src/images/logos/mailchep.png"
+        },
+        "description": "Description C",
+        "members": [
+            {
+                "name": "Frank",
+                "image": "./src/images/members/member3.jpeg"
+            },
+            {
+                "name": "Henry",
+                "image": "./src/images/members/member2.webp"
+            }
+        ],
+        "categories": "<a href='#'>Category C</a>",
+        "tags": "<span class='border'>Tag C</span>",
+        "meetingTime": "<strong>2024-04-03</strong>",
+        "plusIcon": "+"
+    },
+    {
+        "brand": {
+            "name": "Paypal",
+            "image": "./src/images/logos/paypal.png"
+        },
+        "description": "Description C",
+        "members": [
+            {
+                "name": "Alice",
+                "image": "./src/images/members/member2.webp"
+            },
+            {
+                "name": "Bob",
+                "image": "./src/images/members/member4.webp"
+            },
+            {
+                "name": "John",
+                "image": "./src/images/members/member1.jpg"
+            },
+            {
+                "name": "Bob",
+                "image": "./src/images/members/member3.jpeg"
+            }
+        ],
+        "categories": "<a href='#'>Category C</a>",
+        "tags": "<span class='border'>Tag C</span>",
+        "meetingTime": "<strong>2024-04-03</strong>",
+        "plusIcon": "+"
+    },
+    {
+        "brand": {
+            "name": "Google",
+            "image": "./src/images/logos/google.png"
+        },
+        "description": "Description C",
+        "members": [
+            {
+                "name": "Bob",
+                "image": "./src/images/members/member4.webp"
+            },
+            {
+                "name": "John",
+                "image": "./src/images/members/member2.webp"
+            },
+            {
+                "name": "Bob",
+                "image": "./src/images/members/member3.jpeg"
+            }
+        ],
+        "categories": "<a href='#'>Category C</a>",
+        "tags": "<span class='border'>Tag C</span>",
+        "meetingTime": "<strong>2024-04-03</strong>",
+        "plusIcon": "+"
+    },
+    {
+        "brand": {
+            "name": "Microsoft",
+            "image": "./src/images/logos/microsoft.png"
+        },
+        "description": "Description C",
+        "members": [
+            {
+                "name": "Alice",
+                "image": "./src/images/members/member2.webp"
+            },
+            {
+                "name": "Bob",
+                "image": "./src/images/members/member4.webp"
+            },
+            {
+                "name": "Bob",
+                "image": "./src/images/members/member3.jpeg"
+            },
+            {
+                "name": "John",
+                "image": "./src/images/members/member1.jpg"
+            }
+        ],
+        "categories": "<a href='#'>Category C</a>",
+        "tags": "<span class='border'>Tag C</span>",
+        "meetingTime": "<strong>2024-04-03</strong>",
+        "plusIcon": "+"
+    }
+]
