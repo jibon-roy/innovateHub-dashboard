@@ -37,6 +37,13 @@ const main = async () => {
             // Checkbox column
             var cell1 = document.createElement("td");
             var checkbox = document.createElement("input");
+            checkbox.addEventListener("change", function () {
+                if (this.checked) {
+                    displayNames(data.brand);
+                } else {
+                    hideNames();
+                }
+            });
             checkbox.id = `selectCheckbox${index}`
             checkbox.type = "checkbox";
             cell1.appendChild(checkbox);
@@ -82,6 +89,7 @@ const main = async () => {
             });
             row.appendChild(cell4);
 
+
             // Categories column
             var cell5 = document.createElement("td");
             cell5.innerHTML = data.categories;
@@ -106,6 +114,22 @@ const main = async () => {
         });
     }
 
+    function displayNames(members) {
+        var nameDisplay = document.getElementById("nameDisplay");
+        nameDisplay.innerHTML = "hello"; // Clear previous names
+        members.split(", ").forEach(function (name) {
+            var nameDiv = document.createElement("div");
+            nameDiv.textContent = name;
+            nameDisplay.appendChild(nameDiv);
+        });
+        nameDisplay.style.display = "block"; // Show the name display div
+    }
+
+    // Function to hide the name display div
+    function hideNames() {
+        var nameDisplay = document.getElementById("nameDisplay");
+        nameDisplay.style.display = "none"; // Hide the name display div
+    }
     // Call the function to create the table
     createTable();
 }
