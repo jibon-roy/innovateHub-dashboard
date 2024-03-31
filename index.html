@@ -288,65 +288,94 @@
             <div class="flex space-between center-item lg-padding">
               <div class="pointer flex relative">
                 <div class="select-wrapper">
-                  <select class="border center-item font-600 rounded-sm hover link sm-padding space-between"
+                  <select id="select-1" name="select-1"
+                    class="border center-item font-600 rounded-sm hover link sm-padding space-between"
                     style="padding-left: 30px;">
                     <option value="All brands">All brands</option>
                     <option value="Feedback">Feedback</option>
-                    <option value="Performance">Performance</option>
                     <option value="Team">Team</option>
                     <option value="Analytics">Analytics</option>
                   </select>
                   <i class="fa-solid fa-list"></i>
                 </div>
                 <div class="select-wrapper">
-                  <select class="border center-item font-600 rounded-sm hover link sm-padding space-between">
+                  <select id="select-2" name="select-2"
+                    class="border center-item font-600 rounded-sm hover link sm-padding space-between">
                     <option value="Desk">Desk</option>
-                    <option value="Feedback">Feedback</option>
-                    <option value="Team">Team</option>
-                    <option value="Analytics">Analytics</option>
+                    <option value="Feedback">Desk</option>
+                    <option value="Team">Desk</option>
+                    <option value="Analytics">Desk</option>
                   </select>
                 </div>
                 <div class="select-wrapper">
-                  <select class="border center-item font-600 rounded-sm hover link sm-padding space-between">
+                  <select id="select-3" name="select-3"
+                    class="border center-item font-600 rounded-sm hover link sm-padding space-between">
                     <option value="Tags">Tags</option>
-                    <option value="Feedback">Feedback</option>
-                    <option value="Team">Team</option>
-                    <option value="Analytics">Analytics</option>
+                    <option value="Feedback">Tags</option>
+                    <option value="Team">Tags</option>
+                    <option value="Analytics">Tags</option>
                   </select>
                 </div>
                 <div class="select-wrapper">
-                  <select class="border center-item rounded-sm hover link sm-padding space-between">
+                  <select id="select-4" name="select-4"
+                    class="border center-item rounded-sm hover link sm-padding space-between"
+                    style="padding-left: 30px;">
                     <option value="Sort">Sort</option>
-                    <option value="Feedback">Feedback</option>
-                    <option value="Team">Team</option>
-                    <option value="Analytics">Analytics</option>
+                    <option value="Feedback">Sort</option>
+                    <option value="Team">Sort</option>
+                    <option value="Analytics">Sort</option>
                   </select>
+                  <i class="fa-solid fa-sort"></i>
                 </div>
                 <div class="select-wrapper">
-                  <select class="border center-item rounded-sm hover link sm-padding space-between">
-                    <option value="Sort">Filter</option>
-                    <option value="Feedback">Feedback</option>
-                    <option value="Team">Team</option>
-                    <option value="Analytics">Analytics</option>
+                  <select id="select-5" name="select-5"
+                    class="border center-item rounded-sm hover link sm-padding space-between"
+                    style="padding-left: 30px;">
+                    <option value="Filter">Filter</option>
+                    <option value="Feedback">Filter</option>
+                    <option value="Team">Filter</option>
+                    <option value="Analytics">Filter</option>
                   </select>
+                  <i class="fa-solid fa-sliders"></i>
                 </div>
               </div>
               <div class="flex">
-                <div class="border hover flex center-item justify-center  sm-padding rounded-sm font-600"
+                <div class="border hover flex pointer center-item justify-center  sm-padding rounded-sm font-600"
                   style="height: 30px;">
                   <img src="./src/images/add.jpg" class="icon" alt="">
                   Meeting
                 </div>
-                <div class="border hover flex center-item justify-center sm-padding rounded-sm font-600"
+                <div class="border pointer hover flex center-item justify-center sm-padding rounded-sm font-600"
                   style="height: 30px;">
-                  Import/Export
+                  <label for="import">
+                    <i class="fa-solid fa-download"></i>
+                    Import/Export
+                  </label>
+                  <input type="file" class="none" name="input" id="import">
                 </div>
               </div>
             </div>
           </header>
+          <table>
+            <thead>
+              <tr>
+                <th><input type="checkbox" id="selectAllCheckbox"><label for="selectAllCheckbox"></label></th>
+                <th>Brand</th>
+                <th>Description</th>
+                <th>Members</th>
+                <th>Categories</th>
+                <th>Tags</th>
+                <th>Next Meeting Time</th>
+                <th>
+                  <button class="border-none pointer text-lg">+</button>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+          </table>
         </div>
-        <div>
-
+        <div class="w-full">
         </div>
       </div>
     </div>

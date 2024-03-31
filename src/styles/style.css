@@ -112,6 +112,10 @@
     display: grid;
 }
 
+.none {
+    display: none;
+}
+
 .disable {
     opacity: 70%;
 }
@@ -280,4 +284,129 @@ body {
     transform: translateY(-50%);
     pointer-events: none;
     /* Ensures the icon doesn't interfere with the select */
+}
+
+/* body table  */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid var(--secondery-color);
+    padding: 8px;
+    text-align: left;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Checkbox:";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Brand:";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Description:";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Members:";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Categories:";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Tags:";
+    }
+
+    td:nth-of-type(7):before {
+        content: "Next Meeting Time:";
+    }
+
+    td:nth-of-type(8):before {
+        content: "Plus Icon:";
+    }
+}
+
+/* Add custom style for the checkbox */
+input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom checkbox */
+input[type="checkbox"]+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* Custom checked style */
+input[type="checkbox"]:checked+label {
+    background-color: black;
+}
+
+/* Custom checkmark */
+input[type="checkbox"]+label:after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 5px;
+    margin-top: -3px;
+    border: solid white;
+    border-width: 3px 3px 0 0;
+    transform: rotate(-225deg);
+    visibility: hidden;
+}
+
+/* Show the custom checkmark when checkbox is checked */
+input[type="checkbox"]:checked+label:after {
+    visibility: visible;
 }
