@@ -32,6 +32,10 @@
     border-radius: 7px;
 }
 
+.rounded-full {
+    border-radius: 50%;
+}
+
 .lg-padding {
     padding: 16px;
 }
@@ -118,6 +122,10 @@
 
 .disable {
     opacity: 70%;
+}
+
+.bg-none {
+    background-color: transparent;
 }
 
 .disable:hover {

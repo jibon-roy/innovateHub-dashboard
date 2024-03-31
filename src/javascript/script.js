@@ -17,40 +17,89 @@ folders.forEach((folderContent, index) => {
     //    
     // })
 })
+async function getData() {
+    const response = await fetch("data.json");
+    const data = await response.json();
+    console.log(data)
 
-var tableData = [
-    { brand: "Brand A", description: "Description A", members: "John, Alice", categories: "Category A", tags: "Tag A", meetingTime: "2024-04-01", plusIcon: "" },
-    { brand: "Brand B", description: "Description B", members: "Bob, Eve", categories: "Category B", tags: "Tag B", meetingTime: "2024-04-02", plusIcon: "" },
-    { brand: "Brand C", description: "Description C", members: "Charlie, David", categories: "Category C", tags: "Tag C", meetingTime: "2024-04-03", plusIcon: "" }
-];
+    return data;
+}
 
-// Function to create table rows dynamically
+var tableData = getData()
+
+// dynamic table
 function createTable() {
     var tableBody = document.getElementById("tableBody");
-    tableBody.innerHTML = ""; // Clear existing rows
-
-    tableData.forEach(function (data, idx) {
+    tableBody.innerHTML = "";
+    tableData.forEach(function (data, index) {
         var row = document.createElement("tr");
 
         // Checkbox column
         var cell1 = document.createElement("td");
         var checkbox = document.createElement("input");
+        checkbox.id = `selectCheckbox${index}`
         checkbox.type = "checkbox";
-        checkbox.id = `checkbox${idx}`;
         cell1.appendChild(checkbox);
         var label = document.createElement("label");
-        label.setAttribute("for", `checkbox${idx}`);
+        label.setAttribute("for", `selectCheckbox${index}`);
         cell1.appendChild(label);
         row.appendChild(cell1);
 
-        // Data columns
-        for (var key in data) {
-            if (data.hasOwnProperty(key)) {
-                var cell = document.createElement("td");
-                cell.textContent = data[key];
-                row.appendChild(cell);
-            }
-        }
+        // Brand column with image
+        var cell2 = document.createElement("td");
+        cell2.style.display = 'flex'
+        cell2.style.alignItems = 'center'
+        cell2.style.gap = '5px'
+        var brandImage = document.createElement("img");
+        brandImage.src = data.brand.image;
+        brandImage.alt = data.brand.name;
+        brandImage.style.width = "35px";
+        brandImage.style.borderRadius = "10px";
+        cell2.appendChild(brandImage);
+        cell2.appendChild(document.createTextNode(data.brand.name));
+        row.appendChild(cell2);
+
+        // Description column
+        var cell3 = document.createElement("td");
+        cell3.textContent = data.description;
+        row.appendChild(cell3);
+
+        // Members column with images
+        var cell4 = document.createElement("td");
+        cell4.style.paddingLeft = '13px'
+        data.members.forEach(function (member) {
+            var memberImage = document.createElement("img");
+            memberImage.src = member.image;
+            memberImage.alt = member.name;
+            memberImage.style.width = "30px";
+            memberImage.style.borderRadius = "50%";
+            memberImage.style.marginLeft = "-7px";
+            memberImage.style.border = "2px solid white";
+            cell4.appendChild(memberImage);
+            memberImage.title = member.name
+            // cell4.appendChild(document.createTextNode(member.name + " "));
+        });
+        row.appendChild(cell4);
+
+        // Categories column
+        var cell5 = document.createElement("td");
+        cell5.innerHTML = data.categories;
+        row.appendChild(cell5);
+
+        // Tags column
+        var cell6 = document.createElement("td");
+        cell6.innerHTML = data.tags;
+        row.appendChild(cell6);
+
+        // Next Meeting Time column
+        var cell7 = document.createElement("td");
+        cell7.innerHTML = data.meetingTime;
+        row.appendChild(cell7);
+
+        // Plus Icon column
+        var cell8 = document.createElement("td");
+        cell8.textContent = data.plusIcon;
+        row.appendChild(cell8);
 
         tableBody.appendChild(row);
     });
