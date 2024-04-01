@@ -7,6 +7,7 @@
   <title>InnovativeHub</title>
   <link rel="shortcut icon" type="image/png" href="./src/images/icon.png" />
   <link rel="stylesheet" href="./src/styles/style.css" />
+  <link rel="stylesheet" href="./src/styles/responsive.css" />
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +24,15 @@
   <!-- main section -->
   <main>
     <!--  Body Wrapper -->
-    <div class="body-wrapper" style="gap: 15px;">
+    <div class="body-wrapper">
       <!-- navigation bar  -->
-      <nav class="navigation flex-2 flex-col space-between rounded md-padding">
+      <nav id="navigation" class="navigation flex-2 flex-col space-between rounded md-padding">
         <!-- nav bar header -->
         <div>
           <header class="nav-header lg-padding">
+            <div onclick="exitMenu()" class="menu justify-center center-item rounded-sm pointer hover"
+                  style="height: 30px; width: 30px; position: absolute; top: 5px; right: 5px;"><i class="fa-solid fa-x"></i>
+            </div>
             <!-- logo -->
             <div class="logo">
               <img draggable="false" src="./src/images/icon.png" class="logo-image" />
@@ -93,7 +97,7 @@
           <div class="folder lg-padding">
             <div class="flex space-between">
               <div class="font-600 disable">FOLDERS</div>
-              <button class="border-none flex center-item pointer">
+              <button class="border-none bg- flex center-item pointer">
                 <img src="./src/images/plus.png" class="icon" alt="">
               </button>
             </div>
@@ -268,25 +272,40 @@
           <!-- body header -->
           <header>
             <div class="flex space-between center-item lg-padding">
-              <div class="text-lg font-600">Products</div>
+              <div class="flex gap justify-center center-item">
+                <div id="menu" class="menu justify-center center-item rounded-sm pointer hover border"
+                  style="height: 30px; width: 30px;"><i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="text-lg font-600">Products</div>
+              </div>
               <div class="flex">
-                <div class="relative">
-                  <i class="fa-solid fa-magnifying-glass absolute pointer"
-                    style="top: 50%; transform: translateY(-50%); left: 10px;"></i>
-                  <input type="text" id="search" name="search" class="border rounded"
-                    style="padding-left: 30px; height: 30px;">
-                </div>
-                <div class="flex space-between center-item rounded-sm pointer hover sm-padding border"
-                  style="height: 30px; width: 30px;"><i class="fa-regular fa-envelope"></i>
-                </div>
-                <div class="flex space-between center-item rounded-sm pointer hover sm-padding border"
-                  style="height: 30px; width: 30px;"><i class="fa-solid fa-gear"></i>
+                  <div class="relative small-none">
+                    <i class="fa-solid fa-magnifying-glass absolute pointer"
+                      style="top: 50%; transform: translateY(-50%); left: 10px;"></i>
+                    <input type="text" id="search" name="search" class="border rounded"
+                      style="padding-left: 30px; height: 30px;">
+                  </div>
+                  <div class="flex">
+                  <div class="flex space-between center-item rounded-sm pointer hover sm-padding border"
+                    style="height: 30px; width: 30px;"><i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <div class="flex space-between center-item rounded-sm pointer hover sm-padding border"
+                    style="height: 30px; width: 30px;"><i class="fa-solid fa-gear"></i>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="small-flex justify-center">
+              <div class="relative">
+                <i class="fa-solid fa-magnifying-glass absolute pointer"
+                  style="top: 50%; transform: translateY(-50%); left: 10px;"></i>
+                <input type="text" id="search-2" name="search-2" class="border rounded"
+                  style="padding-left: 30px; height: 30px; max-width: 300px; min-width: 100px;">
+              </div>
+            </div>
             <hr class="bg-hover border-1">
-            <div class="flex space-between center-item lg-padding">
-              <div class="pointer flex relative">
+            <div class="flex menu-wrapper space-between center-item lg-padding">
+              <div class="pointer flex menu-wrapper relative">
                 <div class="select-wrapper">
                   <select id="select-1" name="select-1"
                     class="border center-item font-600 rounded-sm hover link sm-padding space-between"
@@ -339,7 +358,7 @@
                   <i class="fa-solid fa-sliders"></i>
                 </div>
               </div>
-              <div class="flex">
+              <div class="flex menu-wrapper">
                 <div class="border hover flex pointer center-item justify-center  sm-padding rounded-sm font-600"
                   style="height: 30px;">
                   <img src="./src/images/add.jpg" class="icon" alt="">
@@ -356,29 +375,45 @@
               </div>
             </div>
           </header>
-          <table>
-            <thead>
-              <tr>
-                <th><input type="checkbox" id="selectAllCheckbox"><label for="selectAllCheckbox"></label></th>
-                <th class="flex space-between">
-                  <div>Brand</div>
-                  <button class="border-none bg-none font-500 pointer text-lg">+</button>
-                </th>
-                <th>Description</th>
-                <th>Members</th>
-                <th>Categories</th>
-                <th>Tags</th>
-                <th>Meeting Time</th>
-                <th>
-                  <button class="border-none bg-none pointer text-lg">+</button>
-                </th>
-              </tr>
-            </thead>
-            <tbody id="tableBody">
-            </tbody>
-          </table>
+          <div class="table-holder">
+            <table>
+              <thead>
+                <tr>
+                  <th><input type="checkbox" id="selectAllCheckbox"><label for="selectAllCheckbox"></label></th>
+                  <th class="flex space-between">
+                    <div>Brand</div>
+                    <button class="border-none bg-none font-500 pointer text-lg">+</button>
+                  </th>
+                  <th>Description</th>
+                  <th>Members</th>
+                  <th>Categories</th>
+                  <th>Tags</th>
+                  <th>Meeting Time</th>
+                  <th>
+                    <button class="border-none bg-none pointer text-lg">+</button>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="w-full">
+        <div class="w-full flex justify-center center-item lg-padding">
+          <div class="button-group rounded">
+            <button class="btn border-none" id="selectBtn"><span id="selected-checked" class="icon text-white bg-dark" style="padding: 3px; border-radius: 3px;">0</span> Selected</button>
+            <button class="btn sm-padding rounded border" id="archiveBtn"><i class="icon">📁</i> Archive</button>
+            <button class="btn sm-padding rounded border" id="deleteBtn"><i class="icon">🗑️</i> Delete</button>
+            <div class="dropdown">
+              <button class="btn md-padding rounded border dropdown-toggle" id="moreBtn">More <i class="fa-solid fa-caret-down"></i></button>
+              <div class="dropdown-content">
+                <div class="hover rounded-sm pointer sm-padding">Option 1</div>
+                <div class="hover rounded-sm pointer sm-padding">Option 2</div>
+                <div class="hover rounded-sm pointer sm-padding">Option 3</div>
+              </div>
+            </div>
+            <button class="btn border-none close-btn" id="closeBtn"><i class="fa-solid fa-x"></i></button>
+          </div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@
             "name": "Wix",
             "image": "./src/images/logos/wix.png"
         },
-        "description": "Description A",
+        "description": "Stunning Wix templates make website creation a breeze for beginners.",
         "members": [
             {
                 "name": "John",
@@ -23,17 +23,17 @@
                 "image": "./src/images/members/member4.webp"
             }
         ],
-        "categories": "<a href='#'>Category A</a>",
+        "categories": "<span class='tag tag3'>E-commerce</span>",
         "tags": "<span class='tag'>Tag A</span>",
-        "meetingTime": "<strong>2024-04-01</strong>",
-        "plusIcon": "+"
+        "meetingTime": "2024-04-01",
+        "plusIcon": ""
     },
     {
         "brand": {
             "name": "Shopify",
             "image": "./src/images/logos/shopify.jpg"
         },
-        "description": "Description B",
+        "description": "Businesses with a user-friendly platform to build and manage their online stores.",
         "members": [
             {
                 "name": "Charlie",
@@ -48,17 +48,17 @@
                 "image": "./src/images/members/member4.webp"
             }
         ],
-        "categories": "<a href='#'>Category B</a>",
+        "categories": "<span class='tag tag1'>SAAS</span><span class='tag tag2'>Category B</span>",
         "tags": "<span class='tag'>Tag B</span>",
-        "meetingTime": "<strong>2024-04-02</strong>",
-        "plusIcon": "+"
+        "meetingTime": "2024-04-02",
+        "plusIcon": ""
     },
     {
         "brand": {
             "name": "MailChimp",
             "image": "./src/images/logos/mailchep.png"
         },
-        "description": "Description C",
+        "description": "Powerful email marketing platform that helps businesses engage with their audience through targeted campaigns and seamless automation.",
         "members": [
             {
                 "name": "Frank",
@@ -69,17 +69,17 @@
                 "image": "./src/images/members/member2.webp"
             }
         ],
-        "categories": "<a href='#'>Category C</a>",
+        "categories": "<span class='tag tag1'>Category C</span>",
         "tags": "<span class='border'>Tag C</span>",
-        "meetingTime": "<strong>2024-04-03</strong>",
-        "plusIcon": "+"
+        "meetingTime": "2024-04-03",
+        "plusIcon": ""
     },
     {
         "brand": {
             "name": "Paypal",
             "image": "./src/images/logos/paypal.png"
         },
-        "description": "Description C",
+        "description": "Widely recognized and trusted online payment platform that enables businesses.",
         "members": [
             {
                 "name": "Alice",
@@ -98,17 +98,17 @@
                 "image": "./src/images/members/member3.jpeg"
             }
         ],
-        "categories": "<a href='#'>Category C</a>",
+        "categories": "<span class='tag tag4'>B2C</span>",
         "tags": "<span class='border'>Tag C</span>",
-        "meetingTime": "<strong>2024-04-03</strong>",
-        "plusIcon": "+"
+        "meetingTime": "2024-04-03",
+        "plusIcon": ""
     },
     {
         "brand": {
             "name": "Google",
             "image": "./src/images/logos/google.png"
         },
-        "description": "Description C",
+        "description": "Multinational technology company that offers a wide range of products and services. ",
         "members": [
             {
                 "name": "Bob",
@@ -123,17 +123,17 @@
                 "image": "./src/images/members/member3.jpeg"
             }
         ],
-        "categories": "<a href='#'>Category C</a>",
+        "categories": "<span class='tag tag1'>Category C</span>",
         "tags": "<span class='border'>Tag C</span>",
-        "meetingTime": "<strong>2024-04-03</strong>",
-        "plusIcon": "+"
+        "meetingTime": "2024-04-03",
+        "plusIcon": ""
     },
     {
         "brand": {
             "name": "Microsoft",
             "image": "./src/images/logos/microsoft.png"
         },
-        "description": "Description C",
+        "description": "Technology company that offers a wide range of products and services.",
         "members": [
             {
                 "name": "Alice",
@@ -152,9 +152,9 @@
                 "image": "./src/images/members/member1.jpg"
             }
         ],
-        "categories": "<a href='#'>Category C</a>",
+        "categories": "<span class='tag tag1'>Category C</span>",
         "tags": "<span class='border'>Tag C</span>",
-        "meetingTime": "<strong>2024-04-03</strong>",
-        "plusIcon": "+"
+        "meetingTime": "2024-04-03",
+        "plusIcon": ""
     }
 ]

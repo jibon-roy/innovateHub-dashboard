@@ -16,6 +16,35 @@
     border-radius: 16px;
 }
 
+.tag{
+    border-radius: 5px;
+    display: inline;
+    padding: 1px 5px;
+    margin: 0 5px 0 0;
+}
+
+.tag1{
+    border: 2px solid rgb(213, 121, 255);
+    background-color: rgb(244, 220, 255);
+    color:rgb(174, 0, 255);
+}
+.tag2{
+    border: 2px solid rgb(121, 255, 161);
+    background-color: rgb(233, 255, 220);
+    color:rgb(0, 255, 13);
+}
+.tag3{
+    border: 2px solid rgb(121, 123, 255);
+    background-color: rgb(214, 222, 255);
+    color:rgb(25, 0, 255);
+}
+.tag4{
+    border: 2px solid rgb(255, 121, 177);
+    background-color: rgb(255, 227, 236);
+    color:rgb(255, 0, 119);
+}
+
+
 .border-none {
     border: none;
 }
@@ -44,9 +73,6 @@
     padding: 10px;
 }
 
-.pointer {
-    cursor: pointer;
-}
 
 .sm-padding {
     padding: 5px;
@@ -56,6 +82,9 @@
     padding: 2px 5px;
 }
 
+.pointer {
+    cursor: pointer;
+}
 .bg-white {
     background-color: var(--main-color);
 }
@@ -167,7 +196,9 @@
 .icon {
     width: 20px;
 }
-
+.mx-auto {
+    margin: 0 auto;
+}
 .w-full {
     width: 100%;
 }
@@ -194,6 +225,8 @@ body {
 .body-wrapper {
     display: flex;
     padding: 16px;
+    gap: 15px;
+    overflow: hidden;
 }
 
 /* navigation */
@@ -295,9 +328,15 @@ body {
 }
 
 /* body table  */
+.table-holder {
+    overflow: scroll;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
+    min-width: 930px;
+    overflow-x: scroll;
 }
 
 th,
@@ -308,74 +347,6 @@ td {
 }
 
 
-@media screen and (max-width: 600px) {
-
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: block;
-    }
-
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-
-    tr {
-        margin-bottom: 15px;
-    }
-
-    td {
-        border: none;
-        position: relative;
-        padding-left: 50%;
-    }
-
-    td:before {
-        position: absolute;
-        top: 6px;
-        left: 6px;
-        width: 45%;
-        padding-right: 10px;
-        white-space: nowrap;
-    }
-
-    td:nth-of-type(1):before {
-        content: "Checkbox:";
-    }
-
-    td:nth-of-type(2):before {
-        content: "Brand:";
-    }
-
-    td:nth-of-type(3):before {
-        content: "Description:";
-    }
-
-    td:nth-of-type(4):before {
-        content: "Members:";
-    }
-
-    td:nth-of-type(5):before {
-        content: "Categories:";
-    }
-
-    td:nth-of-type(6):before {
-        content: "Tags:";
-    }
-
-    td:nth-of-type(7):before {
-        content: "Next Meeting Time:";
-    }
-
-    td:nth-of-type(8):before {
-        content: "Plus Icon:";
-    }
-}
 
 /* Add custom style for the checkbox */
 input[type="checkbox"] {
@@ -418,3 +389,49 @@ input[type="checkbox"]+label:after {
 input[type="checkbox"]:checked+label:after {
     visibility: visible;
 }
+
+
+/* button group */
+.button-group {
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    padding: 5px;
+    border: 2px solid var(--secondery-color);
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0 5px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  
+  .icon {
+    margin-right: 5px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: -110px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }

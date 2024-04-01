@@ -29,35 +29,28 @@ const main = async () => {
 
     // dynamic table
     function createTable() {
-        var tableBody = document.getElementById("tableBody");
+        const tableBody = document.getElementById("tableBody");
         tableBody.innerHTML = "";
         tableData?.forEach(function (data, index) {
-            var row = document.createElement("tr");
+            const row = document.createElement("tr");
 
             // Checkbox column
-            var cell1 = document.createElement("td");
-            var checkbox = document.createElement("input");
-            checkbox.addEventListener("change", function () {
-                if (this.checked) {
-                    displayNames(data.brand);
-                } else {
-                    hideNames();
-                }
-            });
+            const cell1 = document.createElement("td");
+            const checkbox = document.createElement("input");
             checkbox.id = `selectCheckbox${index}`
             checkbox.type = "checkbox";
             cell1.appendChild(checkbox);
-            var label = document.createElement("label");
+            const label = document.createElement("label");
             label.setAttribute("for", `selectCheckbox${index}`);
             cell1.appendChild(label);
             row.appendChild(cell1);
 
             // Brand column with image
-            var cell2 = document.createElement("td");
+            const cell2 = document.createElement("td");
             cell2.style.display = 'flex'
             cell2.style.alignItems = 'center'
             cell2.style.gap = '5px'
-            var brandImage = document.createElement("img");
+            const brandImage = document.createElement("img");
             brandImage.src = data.brand.image;
             brandImage.alt = data.brand.name;
             brandImage.style.width = "35px";
@@ -65,17 +58,18 @@ const main = async () => {
             cell2.appendChild(brandImage);
             cell2.appendChild(document.createTextNode(data.brand.name));
             row.appendChild(cell2);
-
+    
             // Description column
-            var cell3 = document.createElement("td");
-            cell3.textContent = data.description;
+            const cell3 = document.createElement("td");
+            const desc = data.description;
+            cell3.textContent = desc.slice(0,22)+'...'
             row.appendChild(cell3);
 
             // Members column with images
-            var cell4 = document.createElement("td");
+            const cell4 = document.createElement("td");
             cell4.style.paddingLeft = '13px'
             data.members.forEach(function (member) {
-                var memberImage = document.createElement("img");
+                const memberImage = document.createElement("img");
                 memberImage.src = member.image;
                 memberImage.alt = member.name;
                 memberImage.style.width = "30px";
@@ -91,45 +85,31 @@ const main = async () => {
 
 
             // Categories column
-            var cell5 = document.createElement("td");
+            const cell5 = document.createElement("td");
             cell5.innerHTML = data.categories;
             row.appendChild(cell5);
 
             // Tags column
-            var cell6 = document.createElement("td");
+            const cell6 = document.createElement("td");
             cell6.innerHTML = data.tags;
             row.appendChild(cell6);
 
             // Next Meeting Time column
-            var cell7 = document.createElement("td");
+            const cell7 = document.createElement("td");
             cell7.innerHTML = data.meetingTime;
             row.appendChild(cell7);
 
             // Plus Icon column
-            var cell8 = document.createElement("td");
+            const cell8 = document.createElement("td");
             cell8.textContent = data.plusIcon;
             row.appendChild(cell8);
 
             tableBody.appendChild(row);
+            const selectedChecked = document.getElementById(`selectCheckbox${index}`)
+            console.log(selectedChecked.checked)
         });
     }
 
-    function displayNames(members) {
-        var nameDisplay = document.getElementById("nameDisplay");
-        nameDisplay.innerHTML = "hello"; // Clear previous names
-        members.split(", ").forEach(function (name) {
-            var nameDiv = document.createElement("div");
-            nameDiv.textContent = name;
-            nameDisplay.appendChild(nameDiv);
-        });
-        nameDisplay.style.display = "block"; // Show the name display div
-    }
-
-    // Function to hide the name display div
-    function hideNames() {
-        var nameDisplay = document.getElementById("nameDisplay");
-        nameDisplay.style.display = "none"; // Hide the name display div
-    }
     // Call the function to create the table
     createTable();
 }
@@ -138,8 +118,45 @@ main()
 
 // Add event listener to the select all checkbox
 document.getElementById("selectAllCheckbox").addEventListener("change", function () {
-    var checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+    const checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
     checkboxes.forEach(function (checkbox) {
         checkbox.checked = this.checked;
     }, this);
 });
+
+// Selected button
+
+
+
+document.getElementById('selectBtn').addEventListener('click', function() {
+    alert('Select button clicked');
+  });
+  
+  document.getElementById('archiveBtn').addEventListener('click', function() {
+    alert('Archive button clicked');
+  });
+  
+  document.getElementById('deleteBtn').addEventListener('click', function() {
+    alert('Delete button clicked');
+  });
+  
+  document.getElementById('moreBtn').addEventListener('click', function() {
+    const dropdownContent = this.nextElementSibling;
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+  });
+  
+  document.getElementById('closeBtn').addEventListener('click', function() {
+    this.parentElement.style.display = 'none';
+  });
+
+  document.getElementById('menu').addEventListener('click', function() {
+    const navbar = document.getElementById('navigation')
+    navbar.style.transition = '0.8s'
+    navbar.style.marginLeft = 0
+  });
+
+  const exitMenu =() => {
+    const navbar = document.getElementById('navigation')
+    navbar.style.transition = '0.8s'
+    navbar.style.marginLeft = '-400px'
+  }
